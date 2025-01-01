@@ -6,7 +6,7 @@ function Counter01() {
 
   const addValue = () => {
     if (counter < 20) {
-      // value not above 20
+      // value not above 20 points
       setCounter(counter + 1);
     }
   };
