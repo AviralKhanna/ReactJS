@@ -1,4 +1,5 @@
 /* HOOKS USED
+const [variable, function] = useState(0)
 
     1. useCallback[function, dependencies] 
     where re- rendering is done in various places in UI we use useCallback 
