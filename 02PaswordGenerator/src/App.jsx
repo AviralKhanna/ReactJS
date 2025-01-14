@@ -1,4 +1,4 @@
-    /* HOOKS USED
+/* HOOKS USED
 
     1. useCallback[function, dependencies] 
     where re- rendering is done in various places in UI we use useCallback 
@@ -6,14 +6,21 @@
     definition between re-renders. UseCallback [function, dependencies] 
     where dependencies is an array of all dependent variables. 
     Dependencies example [number, character, setPassword].
-    Method optimization usinf memoization, where the chache memory is used to store.
+    Method optimization usinf memoization. 
+    where the chache memory is used to store.
 
     2. useEffect[setup, dependencies] 
     useEffect(() => {generatePassword()}, [dependencies])
     used to synchronize dependencies while re-rendering.
     Used to re-render the elements/dependencies involved.
 
+    3. useRef used when we need a reference of some element. 
+    Here used for copying the password to clipboard.
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRangel(0, 20);
+
 */
+
 import React, { useState, useEffect } from "react";
 
 const App = () => {
@@ -45,7 +52,7 @@ const App = () => {
   useEffect(() => {
     generatePassword();
   }, [length, specialAllowed, numberAllowed, setPassword]); // Runs whenever length, specialAllowed, or numberAllowed changes
-// setPassword
+  // setPassword
   const handleCopy = () => {
     navigator.clipboard.writeText(password);
     alert("Password copied to clipboard!");
@@ -54,7 +61,9 @@ const App = () => {
   return (
     <>
       <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-6 py-4 my-8 text-center bg-slate-700 text-orange-500">
-        <h1 className="text-white text-xl font-bold mb-4">Password Generator</h1>
+        <h1 className="text-white text-xl font-bold mb-4">
+          Password Generator
+        </h1>
         <div className="flex shadow rounded-lg overflow-hidden mb-4 bg-white">
           <input
             type="text"
