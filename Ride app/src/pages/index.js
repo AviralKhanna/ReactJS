@@ -3,3 +3,4 @@ export { default as Login } from "./Login";
 export { default as Signup } from "./Signup";
 export { default as CreateRide } from "./CreateRide";
 export { default as BookRide } from "./BookRide";
+export { default as Settings } from "./Settings"

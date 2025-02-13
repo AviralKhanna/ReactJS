@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Logo"; // Ensure Logo component exists and is correct
+import Logo from "./Logo"; // Ensure the Logo component exists
 
 const Navbar = () => {
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link to="/book-ride" className="hover:text-blue-400 transition duration-200">
             Book Ride
           </Link>
-          <Link to="/settings" className="hover:text-blue-400 transition duration-200">
+          <Link to="/settings" className="hover:text-blue-400 transition duration-200"> {/* ✅ Fixed Settings Route */}
             Settings
           </Link>
           <Link to="/contact" className="hover:text-blue-400 transition duration-200">
