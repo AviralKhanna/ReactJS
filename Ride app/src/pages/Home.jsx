@@ -14,9 +14,9 @@ const Home = () => {
         <div className="flex-grow p-10 flex flex-col items-center">
           
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
-            Your Ride, <span className="text-blue-400">Your Comfort</span>
-          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-center text-black">
+            No Rides? <span className="text-blue-500">We got You!</span>
+          </h1>
 
           {/* Cards Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-8">

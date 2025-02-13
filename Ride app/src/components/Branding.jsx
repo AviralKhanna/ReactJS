@@ -3,10 +3,10 @@ import { FaRoad } from "react-icons/fa"; // Placeholder icon for logo
 
 const Branding = () => {
   return (
-    <div className="relative w-full bg-blue-200 text-white flex items-center justify-between py-40 px-10">
+    <div className="relative w-full bg-blue-200 text-white flex items-center justify-between py-40">
       {/* Large Logo */}
       <div className="flex items-center space-x-4">
-        <FaRoad className="text-9xl text-blue-900" /> {/* Replace with actual logo */}
+        <FaRoad className="px-5 text-9xl text-blue-900" /> {/* Replace with actual logo */}
         <h1 className="text-black text-7xl font-bold">RideConnect</h1>
       </div>
 
@@ -18,7 +18,7 @@ const Branding = () => {
 
       {/* Motto */}
       <div className="relative text-right">
-        <h2 className="text-black text-5xl font-semibold">"Connecting Rides, Connecting People"</h2>
+        <h2 className="text-black text-5xl font-semibold px-5">"Connecting Rides, Connecting People"</h2>
       </div>
     </div>
   );
